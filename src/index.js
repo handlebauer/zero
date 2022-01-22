@@ -68,4 +68,14 @@ export class Zero {
   save(data = encode([...this.store])) {
     return fs.writeFile(this.filePath, data)
   }
+
+  async *[Symbol.asyncIterator]() {
+    for (const [key, [value, expiresAt]] of this.store) {
+      if (Date.now() > expiresAt) {
+        await this.delete(key)
+      } else {
+        yield value
+      }
+    }
+  }
 }
