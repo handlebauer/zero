@@ -1,11 +1,18 @@
 {
   "name": "@hbauer/zero",
-  "version": "0.0.0",
+  "version": "0.2.0",
   "type": "module",
-  "main": "src/index.js",
+  "main": "lib/index.cjs.js",
+  "module": "lib/index.esm.js",
+  "files": [
+    "lib"
+  ],
   "repository": "https://github.com/handlebauer/zero",
   "author": "handlebauer <handlebauer@pm.me>",
   "license": "MIT",
+  "scripts": {
+    "build": "rimraf lib && rollup -c"
+  },
   "prettier": "@hbauer/prettier-config",
   "eslintConfig": {
     "extends": "@hbauer/eslint-config"
@@ -14,6 +21,9 @@
     "@hbauer/eslint-config": "^1.2.1",
     "@hbauer/prettier-config": "^1.1.0",
     "eslint": "^8.7.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.66.0",
+    "rollup-plugin-terser": "^7.0.2"
   }
 }
