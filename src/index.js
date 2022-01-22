@@ -41,8 +41,7 @@ export class Zero {
 
   async get(key) {
     const [value, expiresAt] = this.store.get(key) || []
-    const expired = Date.now() > expiresAt
-    if (expired) {
+    if (Date.now() > expiresAt) {
       await this.delete(key)
       return undefined
     }
