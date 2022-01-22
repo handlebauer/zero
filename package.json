@@ -1,0 +1,19 @@
+{
+  "name": "@hbauer/zero",
+  "version": "0.0.0",
+  "type": "module",
+  "main": "src/index.js",
+  "repository": "https://github.com/handlebauer/zero",
+  "author": "handlebauer <handlebauer@pm.me>",
+  "license": "MIT",
+  "prettier": "@hbauer/prettier-config",
+  "eslintConfig": {
+    "extends": "@hbauer/eslint-config"
+  },
+  "devDependencies": {
+    "@hbauer/eslint-config": "^1.2.1",
+    "@hbauer/prettier-config": "^1.1.0",
+    "eslint": "^8.7.0",
+    "prettier": "^2.5.1"
+  }
+}
