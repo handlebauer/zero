@@ -39,11 +39,11 @@ export class Zero {
     return Date.now() + hoursToSeconds(this.ttl)
   }
 
-  get(key) {
+  async get(key) {
     const [value, expiresAt] = this.store.get(key) || []
     const expired = Date.now() > expiresAt
     if (expired) {
-      this.delete(key)
+      await this.delete(key)
       return undefined
     }
     return value
