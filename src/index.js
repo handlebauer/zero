@@ -1,11 +1,5 @@
 import { promises as fs } from 'node:fs'
-import { dirname, join } from 'node:path'
-import { fileURLToPath } from 'node:url'
-
-const path = fileURLToPath(new URL(import.meta.url))
-const currentWorkingDirectory = dirname(path)
-const buildFilePath = fileName =>
-  join(currentWorkingDirectory, `${fileName}.zero`)
+import { buildFilePath } from './build-file-path.js'
 
 const hoursToSeconds = hours => 1000 * 60 * 60 * hours
 
@@ -24,7 +18,7 @@ const returnFalse = () => false
 
 export class Zero {
   static async init(fileName, options = {}) {
-    const filePath = buildFilePath(fileName)
+    const filePath = await buildFilePath(fileName)
     const array = await parseFile(filePath)
     return new Zero(filePath, array, options)
   }
