@@ -1,4 +1,4 @@
-import { promises as fs } from 'node:fs'
+import { accessSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
@@ -7,12 +7,12 @@ const getCwd = () => {
   return dirname(path)
 }
 
-const findRoot = (target = 'package.json') => {
-  const cwd = getCwd()
+const cwd = getCwd()
 
-  const findUp = async directory => {
+const findRoot = (target = 'package.json') => {
+  const findUp = directory => {
     try {
-      await fs.access(join(directory, target))
+      accessSync(join(directory, target))
       return directory
     } catch {}
 
@@ -27,5 +27,5 @@ const findRoot = (target = 'package.json') => {
   return findUp(cwd)
 }
 
-export const buildFilePath = async fileName =>
-  join((await findRoot()) || getCwd(), `${fileName}.zero`)
+export const buildFilePath = fileName =>
+  join(findRoot() || cwd, `${fileName}.zero`)
