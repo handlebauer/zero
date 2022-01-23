@@ -24,7 +24,12 @@ const findRoot = (target = 'package.json') => {
     return findUp(parent)
   }
 
-  return findUp(cwd)
+  // We first need to find @hbauer/zero's `package.json`
+  const self = findUp(cwd)
+  // Then, search upwards from the parent directory...
+  const parent = dirname(self)
+  // ... before returning the result
+  return findUp(parent)
 }
 
 export const buildFilePath = fileName =>
