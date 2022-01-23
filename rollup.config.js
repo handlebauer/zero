@@ -5,7 +5,7 @@ const input = 'src/index.js'
 
 export default {
   input,
-  plugins: [terser()],
+  plugins: [terser({ keep_classnames: true })],
   external: ['node:fs', 'node:path', 'node:url'],
   output: [
     { file: pkg.main, format: 'cjs' },
