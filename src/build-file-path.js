@@ -33,4 +33,4 @@ const findRoot = (target = 'package.json') => {
 }
 
 export const buildFilePath = fileName =>
-  join(findRoot() || cwd, `${fileName}.zero`)
+  join(findRoot() || cwd, `${fileName}.z`)
