@@ -35,11 +35,10 @@ export class Zero {
 
   get(key) {
     const [value, expiresAt] = this.store.get(key) || []
-    if (Date.now() > expiresAt) {
-      this.delete(key)
-      return undefined
+    if (expiresAt > Date.now()) {
+      return value
     }
-    return value
+    return this.delete(key)
   }
 
   set(key, value) {
