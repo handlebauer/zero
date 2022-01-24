@@ -33,6 +33,7 @@
     "rollup-plugin-terser": "^7.0.2"
   },
   "dependencies": {
-    "@hbauer/find-package-dir": "^0.2.1"
+    "@hbauer/find-package-dir": "^0.2.1",
+    "@hbauer/to-milliseconds": "^0.1.0"
   }
 }

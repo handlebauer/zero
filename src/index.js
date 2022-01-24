@@ -1,8 +1,7 @@
 import { join } from 'node:path'
 import { openSync, readFileSync, writeFileSync } from 'node:fs'
+import { h } from '@hbauer/to-milliseconds'
 import { findPackageDir } from '@hbauer/find-package-dir'
-
-const hoursToSeconds = hours => 1000 * 60 * 60 * hours
 
 const encode = JSON.stringify
 const decode = JSON.parse
@@ -30,7 +29,7 @@ export class Zero {
   }
 
   get expiresAt() {
-    return Date.now() + hoursToSeconds(this.ttl)
+    return Date.now() + (this.ttl * h) / 1000
   }
 
   get(key) {

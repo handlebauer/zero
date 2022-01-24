@@ -53,6 +53,11 @@
   resolved "https://registry.yarnpkg.com/@hbauer/prettier-config/-/prettier-config-1.1.0.tgz#c9a2aff583e4d88a89ecf8587361e82f8c1e268d"
   integrity sha512-bGpnP9vdX6gXFhNm3QS9fYDfmFKGRWDsAkfbquMTsSCd0zpVbMw5gGxAXfRksB8WI4p7a3pYscLz8MHIUt0n6g==
 
+"@hbauer/to-milliseconds@^0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@hbauer/to-milliseconds/-/to-milliseconds-0.1.0.tgz#d702f4ab31e9c68ceaae98490e04f401afd4b9bb"
+  integrity sha512-PtARg5wepCamzWGmp6YbXrS+gOP8ya7/T39MGA4SLE7MYqMd+Rhi1jo2CFZrRvdHIGbMTOdLm5l2x+74+1KGVA==
+
 "@humanwhocodes/config-array@^0.9.2":
   version "0.9.2"
   resolved "https://registry.yarnpkg.com/@humanwhocodes/config-array/-/config-array-0.9.2.tgz#68be55c737023009dfc5fe245d51181bb6476914"
