@@ -43,6 +43,11 @@
   resolved "https://registry.yarnpkg.com/@hbauer/eslint-config/-/eslint-config-1.2.1.tgz#f2e1455c975639f7e7c565e2e41665a1f538dc7e"
   integrity sha512-1fbvWEU4eH5mWBkABdoXlaTjTjEOJwDT70L+LYM2pU1/0+l6RJcgbU6lAab/5rpX19Z36lXsnsNf9+MZU3chcQ==
 
+"@hbauer/find-package-dir@^0.2.1":
+  version "0.2.1"
+  resolved "https://registry.yarnpkg.com/@hbauer/find-package-dir/-/find-package-dir-0.2.1.tgz#ecfed8a9878b11f47b8f290abd4ba79272629db8"
+  integrity sha512-dFWMfpR1dlbiCK8XDdIKwOBHIf+kq855e4/Sa3zBHz+FsGbsqX3718/xPmw0+ac/zCPXSv0WzmIub/nmunTUeg==
+
 "@hbauer/prettier-config@^1.1.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@hbauer/prettier-config/-/prettier-config-1.1.0.tgz#c9a2aff583e4d88a89ecf8587361e82f8c1e268d"

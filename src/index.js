@@ -1,5 +1,6 @@
+import { join } from 'node:path'
 import { openSync, readFileSync, writeFileSync } from 'node:fs'
-import { buildFilePath } from './build-file-path.js'
+import { findPackageDir } from '@hbauer/find-package-dir'
 
 const hoursToSeconds = hours => 1000 * 60 * 60 * hours
 
@@ -17,7 +18,7 @@ const returnFalse = () => false
 
 export class Zero {
   static init(fileName, options = {}) {
-    const filePath = buildFilePath(fileName)
+    const filePath = join(findPackageDir(), `${fileName}`)
     const array = parseFile(filePath)
     return new Zero(filePath, array, options)
   }
